@@ -1,0 +1,73 @@
+/* src/app/components/receitas/receita/receita.component.css */
+section {
+  width: 280px;
+  min-height: 100px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: 10px;  /* Reduzido de 64px para 10px para ficar mais alinhado quando lado a lado */
+  cursor: pointer;    /* Indica que é clicável */
+  transition: transform 0.2s ease;  /* Efeito suave ao passar o mouse */
+}
+
+section:hover {
+  transform: translateY(-3px);  /* Leve movimento ao passar o mouse */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  /* Sombra mais pronunciada */
+}
+
+.info-receita {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  padding: 8px;
+  width: 100%;
+}
+
+.img-texto {
+  display: flex; /* Exibe imagem e texto lado a lado */
+  align-items: center; /* Alinha verticalmente ao centro */
+  gap: 12px; /* Espaçamento entre imagem e texto */
+  width: 100%;
+}
+
+.img-receita {
+  width: 120px;  /* Mantém o tamanho da imagem */
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover; /* Garante que a imagem fique bem cortada */
+}
+
+.texto-receita {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.texto-h2 {
+  font-family: var(--font-montserrat, 'Montserrat', sans-serif);
+  font-size: 14px;
+  font-weight: var(--font-weight-bold, 700);
+  line-height: 20px;
+  text-align: left;
+  max-width: 100%;
+  margin: 0;
+}
+
+.texto-h3 {
+  font-family: var(--font-montserrat, 'Montserrat', sans-serif);
+  font-size: 14px;
+  font-weight: var(--font-weight-normal, 400);
+  line-height: 18px;
+  text-align: left;
+  color: var(--color-secundaria, #666);
+  margin: 0;
+}

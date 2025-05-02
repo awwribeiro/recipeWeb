@@ -1,0 +1,23 @@
+<section class="container buscar-receita ff-inter">
+  <form>
+    <label for="termo"></label>
+
+    <input type="text"
+           name="termo"
+           [(ngModel)]="termoBusca"
+           (ngModelChange)="aoBuscar()"
+           class="input"
+           required
+           autofocus
+           placeholder="Search for your recipe">
+    <!-- Campo de input com ngModel que atualiza a variável termoBusca e chama aoBuscar() ao digitar -->
+  </form>
+  <div class="favorito">
+    <button class="favorito-btn">
+      <span>{{ '\u2764' }}</span>
+    </button>
+    <p>Favorite Recipes</p>
+  </div>
+</section>
+
+

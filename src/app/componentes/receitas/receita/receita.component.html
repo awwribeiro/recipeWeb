@@ -1,0 +1,24 @@
+<section  (click)="verDetalhes()" class="info-receita">
+  <div class="info-receita" *ngIf="dados">
+    <div class="img-texto">
+      <img [src]="dados.image_url" [alt]="dados.title" class="img-receita">
+      <div class="texto-receita">
+        <h2 class="texto-h2"><b> {{ dados.title }} </b></h2>
+        <h3 class="texto-h3">{{ dados.publisher }}</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+

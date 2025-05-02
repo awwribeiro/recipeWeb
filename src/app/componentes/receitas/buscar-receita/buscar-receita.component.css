@@ -1,0 +1,60 @@
+.buscar-receita {
+  padding: 0.5rem 0; /* Espaçamento interno (topo e base) de 2rem, laterais com 0 */
+}
+
+.buscar-receita form {
+  width: 100%;
+  background: #e2dedebe;
+  border: none;                /* Remove qualquer borda do formulário */
+  padding: 0rem 0rem;
+  position:relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.buscar-receita form .input {
+  width: 13%;
+  border: none;                /* Remove a borda do campo de entrada */
+  height: 20px;                /* Define altura fixa de 40px */
+  padding: 1rem 5rem;          /* Espaço interno: 1rem vertical, 2rem horizontal */
+  margin: 1rem 0 1rem;       /* Margem: 1rem em cima, 1rem embaixo */
+  position:relative;
+  left: 580px;
+}
+
+.buscar-receita form .textarea {
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+
+.favorito-btn {
+  top: 380px;
+  right: 250px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: #ff5252;
+  padding: 0;
+  outline: none;
+}
+.favorito-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.favorito {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  position: absolute; /* Se você ainda quiser posicionar a div no canto */
+  top: 365px;
+  right: 250px;
+}
+.favorito p {
+  margin: 0;
+  font-weight: bold;
+}

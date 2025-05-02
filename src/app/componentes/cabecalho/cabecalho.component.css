@@ -1,0 +1,14 @@
+.cabecalho img {
+  width: 100%;
+}
+
+.cabecalho p {
+    position: absolute;
+    top: 20px;         /* Distância do topo */
+    left: 450px;        /* Distância da esquerda */
+    color: white;      /* Cor do texto */
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 8px;
+}
+

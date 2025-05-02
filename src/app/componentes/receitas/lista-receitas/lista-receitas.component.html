@@ -1,0 +1,6 @@
+<div *ngIf="receitas.length > 0" class="container-receitas">
+  <div *ngFor="let receita of receitas">
+    <app-receita [dados]="receita"></app-receita>
+  </div>
+</div>
+

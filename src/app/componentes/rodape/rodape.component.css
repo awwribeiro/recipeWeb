@@ -1,0 +1,19 @@
+.rodape {
+  position: fixed;          /* Fixa o rodapé na parte inferior da tela */
+  bottom: 0;                /* Alinha no fundo da janela */
+  left: 0;
+  width: 100%;              /* Ocupa toda a largura */
+  background-color: #5c5a5a;   /* Cor de fundo */
+  padding: 10px 0;
+  text-align: right;
+  z-index: 1000;            /* Fica acima de outros elementos */
+}
+
+.rodape p {
+  margin: 0;
+  color: rgb(247, 245, 245);
+  font-size: 18px;
+  padding: 0 20px;
+  border-radius: 8px;
+  word-wrap: break-word;   /* Quebra de texto para responsividade */
+}

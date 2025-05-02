@@ -1,0 +1,12 @@
+.receitas-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.lista {
+  flex: 2;
+}
+
+.detalhes {
+  flex: 3;
+}
