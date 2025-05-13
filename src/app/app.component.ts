@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
 import { CabecalhoComponent } from "./componentes/cabecalho/cabecalho.component";
 import { RodapeComponent } from "./componentes/rodape/rodape.component";
 import { PaginaInicalComponent } from './componentes/receitas/pagina-inical/pagina-inical.component';
+import { CardComponent } from './componentes/receitas/card/card.component';
+import { ListaReceitasComponent } from './componentes/receitas/lista-receitas/lista-receitas.component';
 // Importa os componentes utilizados no template da aplicação.
 
 @Component({

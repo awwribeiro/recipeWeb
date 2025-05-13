@@ -1,19 +1,10 @@
-/* src/app/components/receitas/receita-completa/receita-completa.component.css */
-section {
-  max-height: 550px;             /* Define a altura máxima da section */
-  min-height: 100px;             /* Garante que a altura mínima da section  */
+.container-card{
   margin: 5px;                   /* Aplica uma margem externa de 5px em todos os lados */
   display: flex;                 /* Ativa o Flexbox para alinhar os elementos filhos */
   flex-direction: column;        /* Organiza os filhos em uma coluna (um abaixo do outro) */
   align-items: center;           /* Centraliza os filhos horizontalmente (no eixo transversal) */
-  background-color: #FFFFFF;     /* Define o fundo branco para a section */
-  border-radius: 5px;            /* Arredonda os cantos da section */
   position: relative;            /* Permite que elementos filhos com position: absolute se posicionem relativos a esta section */
-  overflow-y: auto;              /* Permite rolagem vertical quando necessário */
-  padding: 1rem;                 /* Espaçamento interno uniforme */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Adiciona sombra externa suave, criando efeito de profundidade */
   width: 600px;                  /* Largura fixa */
-  margin-left: 20px;             /* Espaço à esquerda ajustado para layout lado a lado */
 }
 
 .info-receita {

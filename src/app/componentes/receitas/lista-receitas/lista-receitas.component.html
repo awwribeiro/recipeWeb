@@ -1,6 +1,18 @@
-<div *ngIf="receitas.length > 0" class="container-receitas">
-  <div *ngFor="let receita of receitas">
-    <app-receita [dados]="receita"></app-receita>
-  </div>
-</div>
+<app-card>
 
+  <div class="container-card" *ngIf="receitas.length > 0">
+    <div *ngFor="let receita of receitas">
+      <app-receita [dados]="receita"></app-receita>
+    </div>
+  </div>
+
+</app-card>
+
+ <!-- ngIF: diretiva estrutural que verifica se o array receitas contém ao menos 1 item
+      se for verdadeiro, o bloco <div class="container-receitas"> é renderizado no DOM
+      se for falso, o bloco nem aparece no HTML -->
+
+
+ <!-- ngFor: diretiva estrutural que percorre cada item do array receitas e repete o
+      elemento <div> para cada um deles. Está instanciando um componente app-receita para
+      cada item da lista receitas, e passando os dados via @Input() -->

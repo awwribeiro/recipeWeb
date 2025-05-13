@@ -6,10 +6,11 @@ import { ReceitaService } from '../receita.service';
 import { Subscribable, Subscription, switchMap } from 'rxjs';
 import { response } from 'express';
 import { error } from 'console';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-receita-completa',
-  imports: [CommonModule],
+  imports: [CommonModule, CardComponent],
   templateUrl: './receita-completa.component.html',
   styleUrl: './receita-completa.component.css'
 })

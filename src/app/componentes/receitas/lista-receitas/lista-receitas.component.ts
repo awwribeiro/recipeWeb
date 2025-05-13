@@ -7,11 +7,12 @@ import { Receita } from '../receita';
 import { ReceitaService } from '../receita.service';
 import { CommonModule } from '@angular/common';
 import { ReceitaComponent } from '../receita/receita.component';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-lista-receitas',
   standalone: true,
-  imports: [CommonModule, ReceitaComponent],
+  imports: [CommonModule, ReceitaComponent, CardComponent],
   templateUrl: './lista-receitas.component.html',
   styleUrl: './lista-receitas.component.css'
 })

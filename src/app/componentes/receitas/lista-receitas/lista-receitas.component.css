@@ -1,16 +1,3 @@
-.container-receitas {
-  max-height: 550px;     /* altura máxima visível */
-  overflow-y: auto;      /* ativa a rolagem vertical se necessário */
-  padding: 1rem;         /* espaçamento interno */
-  border: 1px solid #ccc;/* borda para visualizar o contorno */
-  border-radius: 5px;
-  background-color: #FFFFFF;    /* Define o fundo branco para a section */
-  max-width: 400px;
-  padding-right: 30px;
-  padding-left: 0px;
-
-  margin-left: 10px;        /* centraliza o bloco */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Adiciona sombra externa suave, criando efeito de profundidade */
-
+.container-card {
+  width: 400px;
 }
-
