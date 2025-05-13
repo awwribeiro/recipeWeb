@@ -1,15 +1,15 @@
-<app-card>
+<app-card *ngIf="receitas.length > 0">
 
-  <div class="container-card" *ngIf="receitas.length > 0">
-    <div *ngFor="let receita of receitas">
-      <app-receita [dados]="receita"></app-receita>
-    </div>
-  </div>
+   <div class="container-card">
+     <div *ngFor="let receita of receitas">
+       <app-receita [dados]="receita"></app-receita>
+     </div>
+   </div>
 
 </app-card>
 
  <!-- ngIF: diretiva estrutural que verifica se o array receitas contém ao menos 1 item
-      se for verdadeiro, o bloco <div class="container-receitas"> é renderizado no DOM
+      se for verdadeiro, o bloco <div class="container-card"> é renderizado no DOM
       se for falso, o bloco nem aparece no HTML -->
 
 
