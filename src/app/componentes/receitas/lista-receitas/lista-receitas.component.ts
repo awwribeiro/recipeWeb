@@ -26,3 +26,4 @@ export class ListaReceitasComponent implements OnChanges {
   // Recebe o termo de busca como input do componente pai. (AppComponent)
 
 }
+  

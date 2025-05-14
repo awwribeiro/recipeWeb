@@ -1,12 +1,11 @@
 import { Receita } from '../receita';
-import { CommonModule, NgFor } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ReceitaService } from '../receita.service';
-import { Subscribable, Subscription, switchMap } from 'rxjs';
-import { response } from 'express';
-import { error } from 'console';
+import { switchMap } from 'rxjs';
 import { CardComponent } from '../card/card.component';
+import { FavoritoService } from '../favorito.service';
 
 @Component({
   selector: 'app-receita-completa',
@@ -19,7 +18,8 @@ export class ReceitaCompletaComponent implements OnInit {
 
     constructor(
       private route: ActivatedRoute,
-      private receitaService: ReceitaService) {}
+      private receitaService: ReceitaService,
+      private favoritoService: FavoritoService) {}
 
     ngOnInit(): void {
       this.route.paramMap.pipe(switchMap(params =>{
@@ -29,7 +29,7 @@ export class ReceitaCompletaComponent implements OnInit {
 
     alternarFavorito() {
       if(this.dados){
-        this.dados.favorite = !this.dados.favorite
+        this.favoritoService.alternar(this.dados);
       }
     }
 }
