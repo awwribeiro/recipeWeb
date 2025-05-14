@@ -29,7 +29,6 @@ export class ReceitaService {
     );
   }
 
-
   getDetalhesReceita(id: string) {
     return this.http.get<any>(`https://forkify-api.herokuapp.com/api/get?rId=${id}`);
   }
