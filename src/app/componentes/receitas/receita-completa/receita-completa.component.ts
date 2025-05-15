@@ -1,4 +1,4 @@
-import { Receita } from '../receita';
+import { Receita } from './../receita';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -22,10 +22,20 @@ export class ReceitaCompletaComponent implements OnInit {
       private favoritoService: FavoritoService) {}
 
     ngOnInit(): void {
-      this.route.paramMap.pipe(switchMap(params =>{
-        const id = params.get('id');
-        return id ? this.receitaService.getDetalhesReceita(id) : [];
-      })).subscribe(response => {this.dados = response.recipe;})}
+  this.route.paramMap.pipe(
+    switchMap(params => {
+      const id = params.get('id');
+      return id ? this.receitaService.getDetalhesReceita(id) : [];
+    })
+  ).subscribe(response => {
+    const receita = response.recipe;
+    receita.favorite = this.favoritoService.getFavoritos()
+      ().some(r => r.recipe_id === receita.recipe_id); // verifica se já é favorita
+
+    this.dados = receita;
+  });
+}
+
 
     alternarFavorito() {
       if(this.dados){

@@ -1,5 +1,4 @@
 import { Component, computed, signal } from '@angular/core';
-import { CardComponent } from '../card/card.component';
 import { ListaReceitasComponent } from '../lista-receitas/lista-receitas.component';
 import { CommonModule } from '@angular/common';
 import { FavoritoService } from '../favorito.service';
