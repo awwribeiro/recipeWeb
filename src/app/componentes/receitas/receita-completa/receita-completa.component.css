@@ -1,10 +1,10 @@
 .container-card{
-  margin: 5px;                   /* Aplica uma margem externa de 5px em todos os lados */
   display: flex;                 /* Ativa o Flexbox para alinhar os elementos filhos */
   flex-direction: column;        /* Organiza os filhos em uma coluna (um abaixo do outro) */
   align-items: center;           /* Centraliza os filhos horizontalmente (no eixo transversal) */
   position: relative;            /* Permite que elementos filhos com position: absolute se posicionem relativos a esta section */
-  width: 600px;                  /* Largura fixa */
+  width: 570px;
+
 }
 
 .info-receita {

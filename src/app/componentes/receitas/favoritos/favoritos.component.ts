@@ -7,7 +7,7 @@ import { FavoritoService } from '../favorito.service';
 @Component({
   selector: 'app-favoritos',
   standalone: true,
-  imports: [CardComponent, ListaReceitasComponent, CommonModule],
+  imports: [ListaReceitasComponent, CommonModule],
   templateUrl: './favoritos.component.html',
   styleUrl: './favoritos.component.css'
 })

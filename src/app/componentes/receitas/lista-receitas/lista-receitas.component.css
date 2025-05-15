@@ -1,3 +1,5 @@
 .container-card {
-  width: 400px;
+  width: 360px;
+  max-width: 90%;
+  
 }

@@ -32,5 +32,6 @@ export class ReceitaCompletaComponent implements OnInit {
         this.favoritoService.alternar(this.dados);
       }
     }
+
 }
 

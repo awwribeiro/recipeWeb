@@ -1,6 +1,9 @@
 .receitas-container {
   display: flex;
   gap: 1rem;
+  flex-direction: row; /* ou row se quiser lado a lado */
+  align-items: center;     /* alinha horizontalmente */
+  justify-content: center; /* alinha verticalmente */
 }
 
 .lista {
