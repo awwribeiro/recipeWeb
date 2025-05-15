@@ -30,4 +30,36 @@ export class PaginaInicalComponent {
       });
     }
   }
+
+  mostrarLista = true;
+  mostrarReceitaCompleta = true;
+  mostrarFavoritos = true;
+
+get layoutClasse() {
+  const visiveis = [
+    this.mostrarLista,
+    this.mostrarReceitaCompleta,
+    this.mostrarFavoritos
+  ].filter(v => v).length;
+
+  if (visiveis === 1) {
+    if (this.mostrarLista) return 'layout-somente-lista';
+    if (this.mostrarReceitaCompleta) return 'layout-somente-completa';
+    if (this.mostrarFavoritos) return 'layout-somente-favoritos';
+  }
+
+  if (visiveis === 2) {
+    return 'layout-duplo';
+  }
+
+  if (visiveis === 3) {
+    return 'layout-triplo';
+  }
+
+  // fallback obrigatório
+  return '';
+}
+
+
+
 }

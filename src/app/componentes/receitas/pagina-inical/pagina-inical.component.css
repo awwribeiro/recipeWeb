@@ -1,15 +1,48 @@
 .receitas-container {
   display: flex;
   gap: 1rem;
-  flex-direction: row; /* ou row se quiser lado a lado */
-  align-items: center;     /* alinha horizontalmente */
-  justify-content: center; /* alinha verticalmente */
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
-.lista {
-  flex: 2;
+/* Layout com 3 visíveis */
+.layout-triplo .receitas-lista-container,
+.layout-triplo .receita-completa-container,
+.layout-triplo .favoritos-container {
+  flex: 1;
+  max-width: 33%;
 }
 
-.detalhes {
-  flex: 3;
+/* Layout com 2 componentes visíveis */
+.layout-duplo section {
+  flex: 1;
+  max-width: 48%;
 }
+
+/* Somente lista – à esquerda */
+.layout-somente-lista {
+  justify-content: flex-start;
+}
+.layout-somente-lista .receitas-lista-container {
+  max-width: 600px;
+}
+
+/* Somente receita completa – centralizada */
+.layout-somente-completa {
+  justify-content: center;
+}
+.layout-somente-completa .receita-completa-container {
+  max-width: 700px;
+}
+
+/* Somente favoritos – à direita */
+.layout-somente-favoritos {
+  justify-content: flex-end;
+}
+.layout-somente-favoritos .favoritos-container {
+  max-width: 600px;
+}
+
+
+

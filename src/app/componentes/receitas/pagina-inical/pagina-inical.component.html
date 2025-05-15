@@ -1,16 +1,16 @@
 <app-buscar-receita (buscar)="aoBuscarReceita($event)"></app-buscar-receita>
 
-<div class="receitas-container">
+<div [ngClass]="layoutClasse" class="receitas-container">
 
-  <div class="receitas-lista-container">
+  <div *ngIf="mostrarLista"  class="receitas-lista-container">
     <app-lista-receitas [receitas]="receitas"></app-lista-receitas>
   </div>
 
-  <div class="receita-completa-container">
+  <div *ngIf="mostrarReceitaCompleta"  class="receita-completa-container">
     <router-outlet name="detalhes"></router-outlet> <!-- receita-completa -->
   </div>
 
-  <div class="favoritos-container">
+  <div *ngIf="mostrarFavoritos"  class="favoritos-container">
      <router-outlet name="receitaFav"></router-outlet>
   </div>
 
