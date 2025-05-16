@@ -1,10 +1,9 @@
 //componente pai de ReceitaComponent
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 //Input(): permite receber dados de componentes pais.
 //OnChanges: hook de ciclo de vida que detecta mudanças nas propriedades @Input.
 
 import { Receita } from '../receita';
-import { ReceitaService } from '../receita.service';
 import { CommonModule } from '@angular/common';
 import { ReceitaComponent } from '../receita/receita.component';
 import { CardComponent } from '../card/card.component';
@@ -26,4 +25,3 @@ export class ListaReceitasComponent implements OnChanges {
   // Recebe o termo de busca como input do componente pai. (AppComponent)
 
 }
-  

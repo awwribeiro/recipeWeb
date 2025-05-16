@@ -34,6 +34,7 @@ export class PaginaInicalComponent {
   mostrarLista = true;
   mostrarReceitaCompleta = true;
   mostrarFavoritos = true;
+  mostrarListaIngredientes = true;
 
 get layoutClasse() {
   const visiveis = [

@@ -26,15 +26,14 @@ export class FavoritoService {
     //set método do signal usado para atualizar seu valor.
     if (!this.favoritos().some(r => r.recipe_id === receita.recipe_id)) { //Verifica se a receita ainda não está na lista
           //this.favoritos.set([...this.favoritos(), receita]); //se não estiver, atualiza o signal com uma nova lista, clona os itens atuais e add a novo receita
-          const atualizados = [...this.favoritos(), receita];
-          this.favoritos.set(atualizados);
+          const atualizados = [...this.favoritos(), receita]; //operador spread (...) pega cada item individualmente da função favoritos() e add em receita [adicionar um novo item a um array existente sem alterar o original]
+          this.favoritos.set(atualizados); //atualiza o signal favoritos com a nova lista
           this.salvaNoStorage(atualizados);
     }
   }
 
   remover(id: string){
     //.filter(...) – método de array que retorna um novo array com os itens que passam em uma condição.
-    //this.favoritos.set(this.favoritos().filter(r => r.recipe_id !== id));
     const atualizados = this.favoritos().filter(r => r.recipe_id !== id);
     this.favoritos.set(atualizados);
     this.salvaNoStorage(atualizados);
