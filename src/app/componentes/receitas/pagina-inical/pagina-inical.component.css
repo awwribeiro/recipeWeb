@@ -1,17 +1,16 @@
 .receitas-container {
   display: flex;
   gap: 1rem;
-  width: 100%;
   padding: 1rem;
   box-sizing: border-box;
 }
 
-/* Layout com 3 visíveis */
+/* Layout com 3 componentes visíveis */
 .layout-triplo .receitas-lista-container,
 .layout-triplo .receita-completa-container,
 .layout-triplo .favoritos-container {
   flex: 1;
-  max-width: 33%;
+  max-width: 70%;
 }
 
 /* Layout com 2 componentes visíveis */
@@ -19,6 +18,7 @@
   flex: 1;
   max-width: 48%;
 }
+
 
 /* Somente lista – à esquerda */
 .layout-somente-lista {

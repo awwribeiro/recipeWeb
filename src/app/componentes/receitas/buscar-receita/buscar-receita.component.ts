@@ -16,7 +16,6 @@ export class BuscarReceitaComponent {
   // Armazena o valor digitado no input.
 
   @Output() buscar = new EventEmitter<string>();
-//receitaCompleta: any;
   // Cria um evento buscar que emite uma string (o termo de busca) para o componente pai (AppComponent)..
 
   aoBuscar() {
@@ -26,13 +25,21 @@ export class BuscarReceitaComponent {
 
     constructor(private router: Router, private route: ActivatedRoute){}
 
-    verFavoritos() {
-      this.router.navigate([
-        {
-          outlets: {
-            receitaFav: ['favoritos']}
-        }
-      ]);
+    private isOutletAtivo(nomeOutlet: string): boolean {
+      const snapshot = this.router.routerState.snapshot; //guarda a estrutura completa das rotas carregadas no momento
+      //.routerState acessa o estado atual das rotas
+      //.snapshot captura um instantaneo estativo do estado atual da árvore de rotas
 
+      return snapshot.root.children.some(child => child.outlet === nomeOutlet)
     }
-}
+
+    verFavoritos(){
+      const estaAberto = this.isOutletAtivo('receitaFav');
+      if(estaAberto){
+          this.router.navigate([{ outlets: { receitaFav: null } }]); //fecha o componente
+      } else {
+          this.router.navigate([{ outlets: { receitaFav: ['favoritos'] } }]); //abre o componente
+      }
+    }
+
+  }
