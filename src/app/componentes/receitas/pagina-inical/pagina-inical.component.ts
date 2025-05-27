@@ -57,10 +57,11 @@ get layoutClasse() {
     return 'layout-triplo';
   }
 
-  // fallback obrigatório
   return '';
 }
 
 
 
 }
+
+

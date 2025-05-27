@@ -3,7 +3,7 @@
   flex-direction: column;        /* Organiza os filhos em uma coluna (um abaixo do outro) */
   align-items: center;           /* Centraliza os filhos horizontalmente (no eixo transversal) */
   position: relative;            /* Permite que elementos filhos com position: absolute se posicionem relativos a esta section */
-  width: 570px;
+  width: 635px;
 
 }
 
@@ -29,8 +29,8 @@
 }
 
 .img-receita {
-  width: 500px;                /* Tamanho da imagem conforme especificado */
-  height: 330px;
+  width: 590px;                /* Tamanho da imagem conforme especificado */
+  height: 390px;
   border-radius: 8px;
   object-fit: cover;           /* Garante que a imagem fique bem cortada */
 }
@@ -43,6 +43,7 @@
   text-align: center;
   max-width: 100%;
   margin: 0;
+  padding-top: 8%;
 }
 
 .texto-publisher {
@@ -53,6 +54,7 @@
   text-align: center;
   color: var(--color-secundaria, #666);
   margin: 0;
+  padding-top: 4%;
 }
 
 .texto-social-rank {
@@ -79,6 +81,7 @@
 .ingredientes {
   width: 100%;
   text-align: left;
+
 }
 
 .ingredientes ul {
@@ -90,6 +93,7 @@
   color: var(--color-secundaria, #666);
   margin: 0;
   padding-left: 1.5rem;
+  padding-top: 12px;
 }
 
 .ingredientes li {

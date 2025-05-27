@@ -1,13 +1,14 @@
 
 .corpo-card {
-  overflow-y: auto;      /* ativa a rolagem vertical se necessário */
+  height: auto;         /* Altura ajustável automaticamente */
+  overflow: visible;    /* Conteúdo pode se expandir */
   padding: 1rem;         /* espaçamento interno */
   border: 1px solid #c4c3c3b7; /* borda para visualizar o contorno */
   border-radius: 5px;
   background-color: #FFFFFF;    /* Define o fundo branco para a section */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Adiciona sombra externa suave, criando efeito de profundidade */
   box-sizing: content-box;
-  max-height: 550px;     /* altura máxima visível */
   display: inline-block;
 }
+
 
