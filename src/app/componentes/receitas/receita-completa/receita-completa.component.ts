@@ -34,6 +34,8 @@ export class ReceitaCompletaComponent implements OnInit {
         ().some(r => r.recipe_id === receita.recipe_id); // verifica se já é favorita
 
         this.dados = receita;
+        this.receitaService.setIngredientesSelecionados(receita.ingredients);  // Armazena apenas os ingredientes
+
        });
   }
 
