@@ -1,18 +1,11 @@
 .container-card{
   display: flex;                 /* Ativa o Flexbox para alinhar os elementos filhos */
   flex-direction: column;        /* Organiza os filhos em uma coluna (um abaixo do outro) */
-  align-items: center;           /* Centraliza os filhos horizontalmente (no eixo transversal) */
+  align-items: stretch;          
   position: relative;            /* Permite que elementos filhos com position: absolute se posicionem relativos a esta section */
   width: 635px;
-  gap: 2rem; /* espaço entre os componentes */
+ /*  gap: 1rem;  espaço entre os componentes */
 
-}
-
-.info-receita {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 

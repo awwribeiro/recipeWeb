@@ -1,3 +1,5 @@
+
+
 .site-receita-completa {
   background-color: #4a90e2;
   color: white;
@@ -10,6 +12,12 @@
   transition: background-color 0.2s;
 }
 
-.site-receita-completa:hover {
-  background-color: #357ac5;
+.botao-vejaMais {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; /* ou flex-start, se quiser alinhar à esquerda */
+  margin-top: 1rem;
+  width: 100%;
 }
+

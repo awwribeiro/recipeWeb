@@ -1,8 +1,10 @@
+
+
 .ingredientes {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-style: ridge;
+  padding: 1rem;
 }
 
 .texto-ingredientes {
@@ -33,16 +35,6 @@
   margin-bottom: 0.5rem;
 }
 
-.botao-vejaMais {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center; /* ou flex-start, se quiser alinhar à esquerda */
-  margin-top: 1rem;
-  width: 100%;
-}
-
-
 /* Estilização dos botões */
 .add-lista-compras {
   background-color: #4a90e2;
@@ -53,9 +45,13 @@
   cursor: pointer;
   font-family: var(--font-montserrat, 'Montserrat', sans-serif);
   font-weight: 500;
-  transition: background-color 0.2s;
+  width: 250px;
 }
 
-.add-lista-compras:hover {
-  background-color: #357ac5;
+.texto-ingredientes,
+.add-lista-compras {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
+
