@@ -9,6 +9,9 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Adiciona sombra externa suave, criando efeito de profundidade */
   box-sizing: content-box;
   display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* opcional: centraliza o conteúdo horizontalmente */
 }
 
 

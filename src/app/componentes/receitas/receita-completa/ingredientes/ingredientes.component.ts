@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Receita } from '../../receita';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ReceitaService } from '../../receita.service';
@@ -7,16 +7,21 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-ingredientes',
   imports: [CommonModule],
+  standalone: true,
   templateUrl: './ingredientes.component.html',
   styleUrl: './ingredientes.component.css'
 })
-export class IngredientesComponent {
-  dados!: Receita;
+export class IngredientesComponent implements OnInit{
+  ingredientes: string[] = [];
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private receitaService: ReceitaService) {}
+
+  ngOnInit(): void {
+    this.ingredientes = this.receitaService.getIngredientesSelecionados();
+  }
 
   private isOutletAtivo(nomeOutlet: string): boolean {
     const snapshot = this.router.routerState.snapshot; //guarda a estrutura completa das rotas carregadas no momento

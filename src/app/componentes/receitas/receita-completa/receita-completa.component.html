@@ -4,13 +4,9 @@
 
     <app-apresentacao></app-apresentacao>
 
-    <app-ingredientes></app-ingredientes>
+    <app-ingredientes *ngIf="dados" ></app-ingredientes>
 
-      <div class="info-receita" *ngIf="dados">
-        <div class="botao-vejaMais">
-          <button class="site-receita-completa">Veja mais</button>
-        </div>
-      </div>
+    <app-modo-preparo></app-modo-preparo>
 
   </section>
 

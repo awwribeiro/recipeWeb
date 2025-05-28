@@ -1,15 +1,13 @@
 <section>
 
-  <div class="info-receita" *ngIf="dados">
     <div class="ingredientes">
       <h2 class="texto-ingredientes" >Ingredients:</h2>
       <ul>
-        <li *ngFor="let ingrediente of dados.ingredients">
+        <li *ngFor="let ingrediente of ingredientes">
           {{ ingrediente }}
         </li>
       </ul>
       <button class="add-lista-compras" (click)="verListaCompras()" >Adicionar à lista de compras</button>
     </div>
- </div>
 
 </section>

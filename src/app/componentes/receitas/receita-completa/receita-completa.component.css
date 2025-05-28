@@ -4,6 +4,7 @@
   align-items: center;           /* Centraliza os filhos horizontalmente (no eixo transversal) */
   position: relative;            /* Permite que elementos filhos com position: absolute se posicionem relativos a esta section */
   width: 635px;
+  gap: 2rem; /* espaço entre os componentes */
 
 }
 

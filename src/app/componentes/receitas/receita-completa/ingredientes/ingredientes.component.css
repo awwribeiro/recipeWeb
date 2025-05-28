@@ -1,4 +1,4 @@
-.info-receita {
+.ingredientes {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,11 +16,6 @@
   padding-top: 8px;
 }
 
-.ingredientes {
-  width: 100%;
-  text-align: left;
-
-}
 
 .ingredientes ul {
   font-family: var(--font-montserrat, 'Montserrat', sans-serif);
