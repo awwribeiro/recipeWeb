@@ -1,0 +1,20 @@
+  <section>
+
+    <div class="info-receita" *ngIf="dados">
+      <div class="texto-receita">
+        <h2 class="texto-title"><b> {{ dados.title }} </b></h2>
+        <h3 class="texto-publisher">{{ dados.publisher }}</h3>
+      </div>
+      <button class="favorito-btn" (click)="alternarFavorito()">
+        <span>{{ dados.favorite ? '\u2764' : '\u2661' }}</span>
+      </button>
+      <div class="img-texto">
+        <img [src]="dados.image_url" [alt]="dados.title" class="img-receita">
+      </div>
+      <h3 class="texto-social-rank" >Social Rank: {{dados.social_rank}}</h3>
+    </div>
+
+  </section>
+
+
+

@@ -1,35 +1,28 @@
 <app-card>
 
   <section class="container-card">
-    <div class="info-receita" *ngIf="dados">
-      <div class="texto-receita">
-        <h2 class="texto-title"><b> {{ dados.title }} </b></h2>
-        <h3 class="texto-publisher">{{ dados.publisher }}</h3>
-      </div>
-      <button class="favorito-btn" (click)="alternarFavorito()">
-        <span>{{ dados.favorite ? '\u2764' : '\u2661' }}</span>
-      </button>
-      <div class="img-texto">
-        <img [src]="dados.image_url" [alt]="dados.title" class="img-receita">
-      </div>
 
-      <h3 class="texto-social-rank" >Social Rank: {{dados.social_rank}}</h3>
-      <div class="ingredientes">
-        <h2 class="texto-ingredientes" >Ingredients:</h2>
-        <ul>
-          <li *ngFor="let ingrediente of dados.ingredients">
-            {{ ingrediente }}
-          </li>
-        </ul>
-      </div>
-      <div class="buttons-recipe">
-        <button class="add-lista-compras" (click)="verListaCompras()" >Adicionar à lista de compras</button>
-        <div class="botoes-inferiores">
-          <button class="site-receita-completa">Receita completa</button>
-          <button class="site-publicacao">Site da publicação</button>
+    <app-apresentacao></app-apresentacao>
+
+      <div class="info-receita" *ngIf="dados">
+        <div class="ingredientes">
+          <h2 class="texto-ingredientes" >Ingredients:</h2>
+          <ul>
+            <li *ngFor="let ingrediente of dados.ingredients">
+              {{ ingrediente }}
+            </li>
+          </ul>
+          <button class="add-lista-compras" (click)="verListaCompras()" >Adicionar à lista de compras</button>
+        </div>
+     </div>
+
+
+      <div class="info-receita" *ngIf="dados">
+        <div class="botao-vejaMais">
+          <button class="site-receita-completa">Veja mais</button>
         </div>
       </div>
-    </div>
+
   </section>
 
 </app-card>
