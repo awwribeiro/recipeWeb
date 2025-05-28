@@ -7,7 +7,6 @@
 
 }
 
-
 .info-receita {
   width: 100%;
   display: flex;
@@ -15,71 +14,5 @@
   align-items: center;
 }
 
-
-.texto-ingredientes {
-  font-family: var(--font-montserrat, 'Montserrat', sans-serif);
-  font-size: 20px;
-  font-weight: var(--font-weight-bold, 700);
-  line-height: 10px;
-  text-align: left;
-  max-width: 100%;
-  margin: 0;
-  padding-top: 8px;
-}
-
-.ingredientes {
-  width: 100%;
-  text-align: left;
-
-}
-
-.ingredientes ul {
-  font-family: var(--font-montserrat, 'Montserrat', sans-serif);
-  font-size: 16px;
-  font-weight: var(--font-weight-normal, 400);
-  line-height: 25px;
-  text-align: left;
-  color: var(--color-secundaria, #666);
-  margin: 0;
-  padding-left: 1.5rem;
-  padding-top: 12px;
-}
-
-.ingredientes li {
-  margin-bottom: 0.5rem;
-}
-
-.botao-vejaMais {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center; /* ou flex-start, se quiser alinhar à esquerda */
-  margin-top: 1rem;
-  width: 100%;
-}
-
-.botao-vejaMais {
-  display: flex;
-  gap: 10px;
-}
-
-/* Estilização dos botões */
-.add-lista-compras,
-.site-receita-completa {
-  background-color: #4a90e2;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-family: var(--font-montserrat, 'Montserrat', sans-serif);
-  font-weight: 500;
-  transition: background-color 0.2s;
-}
-
-.add-lista-compras:hover,
-.site-receita-completa:hover:hover {
-  background-color: #357ac5;
-}
 
 
