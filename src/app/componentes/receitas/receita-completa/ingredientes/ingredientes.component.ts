@@ -38,7 +38,7 @@ export class IngredientesComponent implements OnInit{
           this.router.navigate([{ outlets: { receitaFav: ['lista-ingredientes'] } }]); // Abre o novo componente no mesmo outlet
         });
     } else {
-        this.router.navigate([{ outlets: { receitaFav: ['lista-ingredientes'] } }]); //abre o componente listaIngredientes
+        this.router.navigate([{ outlets: { listaIngredientes: ['lista-ingredientes'] } }]); //abre o componente listaIngredientes
     }
   }
 

@@ -12,7 +12,7 @@ section {
   overflow: hidden;
   padding-top: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin-left: 10px;  /* Reduzido de 64px para 10px para ficar mais alinhado quando lado a lado */
+  margin: 4px auto; /* ✅ Margens verticais de 8px e centralização horizontal */
   cursor: pointer;    /* Indica que é clicável */
   transition: transform 0.2s ease;  /* Efeito suave ao passar o mouse */
 }

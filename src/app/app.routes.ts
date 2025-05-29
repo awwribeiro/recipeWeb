@@ -22,7 +22,7 @@ export const routes: Routes = [
    {
       path: 'lista-ingredientes',
       component: ListaIngredientesComponent,
-      outlet: 'receitaFav',
+      outlet: 'listaIngredientes',
    },
    {  path: '**',
       redirectTo: 'receitas'

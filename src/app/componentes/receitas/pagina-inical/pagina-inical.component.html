@@ -10,12 +10,14 @@
     <router-outlet name="detalhes"></router-outlet>
   </div>
 
-  <div *ngIf="mostrarFavoritos"  class="favoritos-container">
+  <div class="componentesLadoEsquerdo">
+    <div *ngIf="mostrarFavoritos"  class="favoritos-container">
      <router-outlet name="receitaFav"></router-outlet>
-  </div>
+    </div>
 
-  <div *ngIf="mostrarListaIngredientes"  class="listaIngredientes-container">
-     <router-outlet name="receitaFav"></router-outlet>
+    <div *ngIf="mostrarListaIngredientes"  class="listaIngredientes-container">
+     <router-outlet name="listaIngredientes"></router-outlet>
+    </div>
   </div>
 
 </div>

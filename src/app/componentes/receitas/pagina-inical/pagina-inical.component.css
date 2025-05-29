@@ -28,14 +28,6 @@
   max-width: 600px;
 }
 
-/* Somente receita completa – centralizada */
-.layout-somente-completa {
-  justify-content: center;
-}
-.layout-somente-completa .receita-completa-container {
-  max-width: 700px;
-}
-
 /* Somente favoritos – à direita */
 .layout-somente-favoritos {
   justify-content: flex-end;

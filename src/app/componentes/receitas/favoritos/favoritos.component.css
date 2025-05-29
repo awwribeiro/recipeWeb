@@ -1,0 +1,7 @@
+.fav-container {
+  width: 350px;
+  max-width: 90%;
+  margin: 0 auto; /* ✅ Centraliza horizontalmente */
+  padding: 5px;
+  padding-right: 16px;
+}

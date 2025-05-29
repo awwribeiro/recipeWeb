@@ -2,7 +2,7 @@
 .corpo-card {
   height: auto;         /* Altura ajustável automaticamente */
   overflow: visible;    /* Conteúdo pode se expandir */
-  padding: 1rem;         /* espaçamento interno */
+  /*padding: 1rem;          espaçamento interno */
   border: 1px solid #c4c3c3b7; /* borda para visualizar o contorno */
   border-radius: 5px;
   background-color: #FFFFFF;    /* Define o fundo branco para a section */
@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center; /* opcional: centraliza o conteúdo horizontalmente */
+  justify-content: center;
 }
 
 

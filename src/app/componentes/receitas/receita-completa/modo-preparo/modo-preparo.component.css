@@ -1,4 +1,8 @@
-
+.section {
+  border: 1px solid #c4c3c3b7; /* borda para visualizar o contorno */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Adiciona sombra externa suave, criando efeito de profundidade */
+}
 
 .site-receita-completa {
   background-color: #4a90e2;
@@ -19,5 +23,6 @@
   align-items: center; /* ou flex-start, se quiser alinhar à esquerda */
   margin-top: 1rem;
   width: 100%;
+  padding-bottom: 20px;
 }
 
