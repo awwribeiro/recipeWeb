@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ReceitaCompletaComponent } from '../receita-completa.component';
+import { ActivatedRoute } from '@angular/router';
+import { ReceitaService } from '../../receita.service';
 
 @Component({
   selector: 'app-modo-preparo',
@@ -9,12 +10,18 @@ import { ReceitaCompletaComponent } from '../receita-completa.component';
 })
 export class ModoPreparoComponent {
 
-  constructor(private receitaCompleta: ReceitaCompletaComponent) {}
+  constructor(
+    private route: ActivatedRoute,
+    private receitaService: ReceitaService) {}
 
   verMais(){
-    const url = this.receitaCompleta.dados?.source_url; // ? Verifica se dados existe antes de acessar source_url
-    if (url) {
-      window.open(url, '_blank'); //'_blank' indica que a URL será aberta em uma nova aba do navegador.
+    const id = this.route.snapshot.paramMap.get('id');
+    if(id){
+      this.receitaService.getURLReceita(id).subscribe(url => {
+        if (url) {
+          window.open(url, '_blank'); //'_blank' indica que a URL será aberta em uma nova aba do navegador.
+        }
+      })
     }
   }
 

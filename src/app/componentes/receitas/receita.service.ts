@@ -33,8 +33,10 @@ export class ReceitaService {
     return this.http.get<any>(`https://forkify-api.herokuapp.com/api/get?rId=${id}`);
   }
 
-  getURLReceita(id: string) {
-    return this.http.get<any>(`https://forkify-api.herokuapp.com/api/get?rId=${id}`);
+  getURLReceita(id: string): Observable<string> {
+    const url2 = `${this.baseUrl}/get?rId=${id}`; //faz a requisição HTTP
+    return this.http.get<any>(url2)
+      .pipe(map(resposta => resposta.recipe.source_url)); //transforma a resposta para retornar apenas o campo source_url
   }
 
   //configuraçao para exportar lista de ingredientes
