@@ -7,6 +7,7 @@
   border: 1px solid #c4c3c3b7; /* borda para visualizar o contorno */
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Adiciona sombra externa suave, criando efeito de profundidade */
+  
 }
 
 .texto-ingredientes {

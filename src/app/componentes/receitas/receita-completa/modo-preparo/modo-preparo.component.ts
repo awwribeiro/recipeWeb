@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Receita } from '../../receita';
 
 @Component({
   selector: 'app-modo-preparo',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './modo-preparo.component.css'
 })
 export class ModoPreparoComponent {
+  dados!: Receita;
+
+  verMais(){
+
+  }
 
 }

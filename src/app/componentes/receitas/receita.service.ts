@@ -44,5 +44,11 @@ export class ReceitaService {
     return this.ingredientesSelecionados;
   }
 
+ // private urlReceita = string;
+//
+ // setURLreceita(source_url: string): {
+ //   this.urlReceita = source_url;
+ // }
+
 }
 

@@ -1,7 +1,9 @@
-.ingredientes{
-  width: 350px;
-  max-width: 90%;
+.card-ingredientes {
+  width: 400px;
   margin: 0 auto; /* ✅ Centraliza horizontalmente */
-  padding: 5px;
-  padding-right: 16px;
+
+}
+
+.ingredientes{
+  padding: 10px;
 }
