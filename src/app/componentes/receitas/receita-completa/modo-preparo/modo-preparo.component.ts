@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Receita } from '../../receita';
+import { ReceitaCompletaComponent } from '../receita-completa.component';
 
 @Component({
   selector: 'app-modo-preparo',
@@ -8,10 +8,14 @@ import { Receita } from '../../receita';
   styleUrl: './modo-preparo.component.css'
 })
 export class ModoPreparoComponent {
-  dados!: Receita;
+
+  constructor(private receitaCompleta: ReceitaCompletaComponent) {}
 
   verMais(){
-
+    const url = this.receitaCompleta.dados?.source_url; // ? Verifica se dados existe antes de acessar source_url
+    if (url) {
+      window.open(url, '_blank'); //'_blank' indica que a URL será aberta em uma nova aba do navegador.
+    }
   }
 
 }

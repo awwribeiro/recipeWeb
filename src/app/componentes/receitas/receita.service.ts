@@ -33,6 +33,10 @@ export class ReceitaService {
     return this.http.get<any>(`https://forkify-api.herokuapp.com/api/get?rId=${id}`);
   }
 
+  getURLReceita(id: string) {
+    return this.http.get<any>(`https://forkify-api.herokuapp.com/api/get?rId=${id}`);
+  }
+
   //configuraçao para exportar lista de ingredientes
   private ingredientesSelecionados: string[] = [];
 
@@ -44,11 +48,6 @@ export class ReceitaService {
     return this.ingredientesSelecionados;
   }
 
- // private urlReceita = string;
-//
- // setURLreceita(source_url: string): {
- //   this.urlReceita = source_url;
- // }
 
 }
 
