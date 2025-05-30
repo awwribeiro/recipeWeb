@@ -1,6 +1,8 @@
 <app-card class="card-ingredientes">
+<div class="receitas">
 
-   <div class="ingredientes">
+  <div class="ingredientes">
+      <h3 class="texto-ingredientes" >{{ title }}</h3>
       <h2 class="texto-ingredientes" >Ingredientes:</h2>
       <ul>
         <li *ngFor="let ingrediente of ingredientes">
@@ -8,5 +10,7 @@
         </li>
       </ul>
    </div>
+
+</div>
 
 </app-card>

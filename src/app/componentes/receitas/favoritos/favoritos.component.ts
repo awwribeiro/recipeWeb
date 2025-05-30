@@ -14,7 +14,7 @@ export class FavoritosComponent {
 
  constructor(public favoritoService: FavoritoService) {}
 
- get receitasFavoritas() {return this.favoritoService.getFavoritos()}
+ get receitasFavoritas() { return this.favoritoService.getFavoritos() }
 
 }
 

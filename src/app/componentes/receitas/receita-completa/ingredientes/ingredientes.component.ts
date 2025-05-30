@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Receita } from '../../receita';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ReceitaService } from '../../receita.service';
 import { CommonModule } from '@angular/common';
+import { Subscribable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-ingredientes',
@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class IngredientesComponent implements OnInit{
   ingredientes: string[] = [];
+  private sub!: Subscription; //um objeto que representa um recurso descartável, geralmente a execução de um Observable
 
   constructor(
     private route: ActivatedRoute,
@@ -20,7 +21,14 @@ export class IngredientesComponent implements OnInit{
     private receitaService: ReceitaService) {}
 
   ngOnInit(): void {
-    this.ingredientes = this.receitaService.getIngredientesSelecionados();
+    this.sub = this.receitaService.getIngredientesSelecionados()
+      .subscribe(lista => this.ingredientes = lista);
+//Observáveis ​​são declarativos. definimos uma função para publicar valores — a fonte —
+//mas essa função não é executada até que um consumidor assine o observável chamando o subscribe método do observável.
+  }
+
+  ngOnDestroy(): void {
+    if (this.sub) this.sub.unsubscribe(); //evitar memory leaks
   }
 
   private isOutletAtivo(nomeOutlet: string): boolean {

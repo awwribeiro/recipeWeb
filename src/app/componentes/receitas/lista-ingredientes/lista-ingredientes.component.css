@@ -1,9 +1,37 @@
-.card-ingredientes {
-  width: 400px;
-  margin: 0 auto; /* ✅ Centraliza horizontalmente */
+.ingredientes {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #c4c3c3b7; /* borda para visualizar o contorno */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  /* Adiciona sombra externa suave, criando efeito de profundidade */
 
 }
 
-.ingredientes{
-  padding: 10px;
+.texto-ingredientes {
+  font-family: var(--font-montserrat, 'Montserrat', sans-serif);
+  font-size: 20px;
+  font-weight: var(--font-weight-bold, 700);
+  line-height: 10px;
+  text-align: left;
+  max-width: 100%;
+  margin: 0;
+  padding-top: 8px;
+}
+
+
+.ingredientes ul {
+  font-family: var(--font-montserrat, 'Montserrat', sans-serif);
+  font-size: 16px;
+  font-weight: var(--font-weight-normal, 400);
+  line-height: 25px;
+  text-align: left;
+  color: var(--color-secundaria, #666);
+  margin: 0;
+  padding-left: 1.5rem;
+  padding-top: 12px;
+}
+
+.ingredientes li {
+  margin-bottom: 0.5rem;
 }

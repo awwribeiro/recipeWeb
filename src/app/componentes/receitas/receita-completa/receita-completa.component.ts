@@ -33,10 +33,12 @@ export class ReceitaCompletaComponent implements OnInit{
       this.receitaService.getDetalhesReceita(id).subscribe(resposta => {
         this.dados = resposta.recipe;
         this.receitaService.setIngredientesSelecionados(this.dados.ingredients);
+        this.receitaService.setNomeReceita(this.dados.title);
+
       });
     }
   }
 
-  
+
 }
 

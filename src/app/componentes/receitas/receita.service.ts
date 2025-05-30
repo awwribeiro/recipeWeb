@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http'; //serviço do Angular responsável por fazer requisições HTTP
 import { Injectable } from '@angular/core'; //necessário para declarar que essa classe pode ser injetada via Injeção de Dependência.
-import { map, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 //map: operador do RxJS usado para transformar os dados recebidos da API.
 //Observable: tipo do RxJS que representa uma sequência de valores assíncronos.
 import { Receita } from './receita';
@@ -40,14 +40,24 @@ export class ReceitaService {
   }
 
   //configuraçao para exportar lista de ingredientes
-  private ingredientesSelecionados: string[] = [];
+  private ingredientesSelecionados$ = new BehaviorSubject<string[]>([]);
 
   setIngredientesSelecionados(ingredientes: string[]) {
-    this.ingredientesSelecionados = ingredientes;
+    this.ingredientesSelecionados$.next(ingredientes);
   }
 
-  getIngredientesSelecionados(): string[] {
-    return this.ingredientesSelecionados;
+  getIngredientesSelecionados(): Observable<string[]> {
+    return this.ingredientesSelecionados$.asObservable();
+  }
+
+  private nomeReceita$ = new BehaviorSubject<string>('');
+
+  setNomeReceita(title: string) {
+    this.nomeReceita$.next(title);
+  }
+
+  getNomeReceita(): Observable<string> {
+    return this.nomeReceita$.asObservable();
   }
 
 
